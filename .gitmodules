@@ -1,0 +1,6 @@
+[submodule "mw-applet"]
+	path = mw-applet
+	url = git://github.com/stepheneb/mw-applet.git
+[submodule "netlogo-applet"]
+	path = netlogo-applet
+	url = git://github.com/stepheneb/netlogo-applet.git
