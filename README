@@ -1,0 +1,11 @@
+Demonstrations of embedding and reporting on both Molecular Workbench and NetLogo applets for the VISUAL project.
+
+This references two other repos as git submodules:
+
+  mw-applet:      git://github.com/stepheneb/mw-applet.git
+  netlogo-applet: git://github.com/stepheneb/netlogo-applet.git
+
+After cloning visual-demos run:
+
+  git submodule init
+  git submodule update
