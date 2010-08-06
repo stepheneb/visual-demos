@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+require 'rubygems'
 require 'net/ssh'
 require 'yaml'
 begin
