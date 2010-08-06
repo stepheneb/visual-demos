@@ -1,0 +1,141 @@
+<h3>
+  Seasonal Heating
+</h3>
+<p></p>
+<p>
+  <applet id="demo1" archive="energy2d.jar" code="org.concord.energy2d.system.System2D" width="600" height="600">
+    <param 
+      name="script" 
+      value="
+        set timestep 100;
+        set convective false;
+        set ray_speed 0.001;
+        set emission_interval 5;
+        set sunny true;
+        set sun_angle 158;
+        set solar_power 20000;
+        set isotherm false;
+        set ruler true;
+        set background_conductivity .1;
+
+        add text (30, 20) Gable roof;
+
+        part polygon(8, 2, 8.5, 2, 8.5, 3, 8, 3);
+        set part[0].color #22ccff;
+        set part[0].reflection 1;
+
+        part rectangle(2, 3, 0.5, 1);
+        set part[1].conductivity 0.001;
+        part rectangle(2, 6, 0.5, 1); 
+        set part[2].conductivity 0.001;
+
+        part polygon(1.5, 6.5, 5.5, 9, 9.5, 6.5, 8.5, 6.5, 5.5, 8.35, 2.5, 6.5);set part[3].conductivity 0.001;
+        set part[3].conductivity 0.001;
+
+        part rectangle(-0.1, 2, 10.2, 2);
+        set part[4].conductivity 0.001;
+        set part[4].color #333333;
+
+        part rectangle(8.5, 6, 0.5, 4);
+        set part[5].conductivity 0.001;
+
+        part rectangle(2.15, 5, 0.2, 2);
+        set part[6].conductivity 0.001;
+        set part[6].color #ffffff;
+        set part[6].transmission 1;
+        set part[6].absorption 0;
+
+        part rectangle(1.5, 6.5, 8, 0.5);
+        set part[7].conductivity 0.001;
+
+        thermometer (1.5, 4);
+        thermometer (3, 4);
+        thermometer (8, 4);
+        boundary temperature(0, 0, 0, 0);">
+  </applet>
+  <applet id="demo2" archive="energy2d.jar" code="org.concord.energy2d.system.System2D" width="600" height="600">
+    <param 
+      name="script" 
+      value="
+        set timestep 100;
+        set convective false;
+        set ray_speed 0.001;
+        set emission_interval 5;
+        set sunny true;
+        set sun_angle 113;
+        set solar_power 20000;
+        set isotherm false;
+        set ruler true;
+        set background_conductivity .1;
+
+        add text (30, 20) Gable roof;
+
+        part polygon(8, 2, 8.5, 2, 8.5, 3, 8, 3);
+        set part[0].color #22ccff;
+        set part[0].reflection 1;
+
+        part rectangle(2, 3, 0.5, 1);
+        set part[1].conductivity 0.001;
+        part rectangle(2, 6, 0.5, 1); 
+        set part[2].conductivity 0.001;
+
+        part polygon(1.5, 6.5, 5.5, 9, 9.5, 6.5, 8.5, 6.5, 5.5, 8.35, 2.5, 6.5);set part[3].conductivity 0.001;
+        set part[3].conductivity 0.001;
+
+        part rectangle(-0.1, 2, 10.2, 2);
+        set part[4].conductivity 0.001;
+        set part[4].color #333333;
+
+        part rectangle(8.5, 6, 0.5, 4);
+        set part[5].conductivity 0.001;
+
+        part rectangle(2.15, 5, 0.2, 2);
+        set part[6].conductivity 0.001;
+        set part[6].color #ffffff;
+        set part[6].transmission 1;
+        set part[6].absorption 0;
+
+        part rectangle(1.5, 6.5, 8, 0.5);
+        set part[7].conductivity 0.001;
+
+        thermometer (1.5, 4);
+        thermometer (3, 4);
+        thermometer (8, 4);
+        boundary temperature(0, 0, 0, 0);">
+  </applet>
+</p>
+<p>
+  <form>
+    <input type="button" value="Run" onclick="run('demo1'); run('demo2')"> 
+    <input type="button" value="Stop" onclick="stop('demo1'); stop('demo2')"> 
+    <input type="button" value="Reset" onclick="jsReset('demo1'); jsReset('demo2')">
+  </form>
+</p>
+
+<script type="text/javascript">
+  var applet;
+
+  function getApplet(id) {
+    applet = document.getElementById(id);
+  }
+
+  function jsReset(id) {
+    getApplet(id);
+    applet.reset();
+  }
+
+  function run(id) {
+    getApplet(id);
+    applet.run();
+  }
+
+  function stop(id) {
+    getApplet(id);
+    applet.stop();
+  }
+
+  function runScript(id, script) {
+    getApplet(id);
+    applet.runNativeScript(script);
+  }
+</script>
