@@ -9,4 +9,4 @@
 	url = git@github.com:stepheneb/jsx_graph_test.git
 [submodule "seasons"]
 	path = seasons
-	url = ./seasons
+	url = git://github.com/stepheneb/seasons.git
