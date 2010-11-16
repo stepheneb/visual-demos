@@ -7,3 +7,6 @@
 [submodule "sc/jsxgraph"]
 	path = sc/jsxgraph
 	url = git@github.com:stepheneb/jsx_graph_test.git
+[submodule "seasons"]
+	path = seasons
+	url = ./seasons
